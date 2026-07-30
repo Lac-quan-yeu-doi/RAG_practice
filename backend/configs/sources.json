@@ -1,0 +1,41 @@
+{
+  "docs_root": "data/raw/python-3.14-docs-text",
+  "documents": [
+    {
+      "document_id": "asyncio",
+      "title": "Python asyncio documentation",
+      "include": [
+        "library/asyncio*.txt",
+        "howto/a-conceptual-overview-of-asyncio.txt"
+      ],
+      "exclude": [
+        "library/asyncio-api-index.txt",
+        "library/asyncio-llapi-index.txt"
+      ]
+    },
+    {
+      "document_id": "concurrent_futures",
+      "title": "Python concurrent.futures documentation",
+      "include": [
+        "library/concurrent.futures.txt"
+      ],
+      "exclude": []
+    }
+  ],
+  "preprocessing": {
+    "remove_navigation_lines": true
+  },
+  "chunking": {
+    "max_chars": 2400,
+    "overlap_paragraphs": 1,
+    "minimum_chars": 120
+  },
+  "embedding": {
+    "model_name": "all-MiniLM-L6-v2",
+    "batch_size": 32
+  },
+  "vector_store": {
+    "path": "data/vector_db",
+    "collection": "python_concurrency_docs"
+  }
+}

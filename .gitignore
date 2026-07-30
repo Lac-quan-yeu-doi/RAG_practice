@@ -1,0 +1,50 @@
+# Environment and secrets
+.env
+backend/.env
+frontend/.env
+*.egg-info
+
+# Python
+**/__pycache__/
+**/*.py[cod]
+backend/.venv/
+backend/venv/
+backend/.pytest_cache/
+backend/.mypy_cache/
+backend/.ruff_cache/
+backend/build/
+backend/dist/
+
+backend/benchmark/*
+
+# Existing backend generated data
+backend/data/raw/*
+!backend/data/raw/README.md
+!backend/data/raw/.gitkeep
+backend/data/vector_db/*
+!backend/data/vector_db/.gitkeep
+backend/outputs/
+
+# Installation folder mount point
+installations/
+
+# Uploaded website workspaces
+storage/*
+!storage/.gitkeep
+backend/web_data/
+
+# Frontend
+frontend/node_modules/
+frontend/dist/
+
+# Local models and caches
+.cache/
+models/
+*.gguf
+*.safetensors
+
+# IDE and operating system
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db

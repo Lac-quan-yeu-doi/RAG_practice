@@ -58,6 +58,14 @@ docker compose up --build
 ```
 Now open `http://localhost:8080`
 
+To clean up, check for:
+```bash
+docker images
+docker ps
+docker volume ps
+```
+then delete if no use
+
 > [NOTE]
 > Docker Compose automatically starts the frontend and backend.
 
